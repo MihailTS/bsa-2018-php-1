@@ -5,18 +5,28 @@ namespace Cryptocurrency\Task1;
 class Dogecoin implements Currency
 {
 
+    private $name = "Dogecoin";
+    private $logoUrl = "https://s2.coinmarketcap.com/static/img/coins/32x32/74.png";
+    private $dailyPrice;
+
+
+    public function __construct(float $dailyPrice)
+    {
+        $this->dailyPrice = $dailyPrice;
+    }
+
     public function getName(): string
     {
-        // TODO: Implement getName() method.
+        return $this->name;
     }
 
     public function getDailyPrice(): float
     {
-        // TODO: Implement getDailyPrice() method.
+        return $this->dailyPrice;
     }
 
     public function getLogoUrl(): string
     {
-        // TODO: Implement getLogoUrl() method.
+        return $this->logoUrl;
     }
 }
